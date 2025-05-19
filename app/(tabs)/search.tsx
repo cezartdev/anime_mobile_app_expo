@@ -1,14 +1,14 @@
 import {
+	Pressable,
+	StyleSheet,
 	Text,
 	View,
-	StyleSheet,
-	Pressable,
 } from 'react-native';
 
-export default function TabTwoScreen() {
+export default function Search() {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Tab Two</Text>
+			<Text style={styles.title}>Search</Text>
 
 			<Pressable style={styles.button}>
 				<Text>Button</Text>
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
 	button: {
 		padding: 10,
 		backgroundColor: 'red',
-		borderRadius: 10
+		borderRadius: 10,
 	},
 });

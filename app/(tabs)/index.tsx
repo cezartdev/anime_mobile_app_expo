@@ -1,22 +1,37 @@
-import { View, StyleSheet } from 'react-native';
 import Text from '@components/atoms/text';
+import View from '@components/atoms/view';
+import { useThemeStore } from '@stores/theme-store';
 export default function TabOneScreen() {
+	const { activeThemeName, activeTheme } = useThemeStore();
+
 	return (
-		<View style={styles.container}>
-			<Text weight='black' size='xl'>Title 1</Text>
-			<Text weight='black' size='lg'>Title 2</Text>
-			<Text weight='bold' size='md'>Subtitle 1</Text>
-			<Text weight='bold' size='sm'>Subtitle 2</Text>
-			<Text weight='normal' size='xs'>Paragraph 1</Text>
-			<Text weight='normal' size='xxs'>Paragraph 2</Text>
+		<View horizontal='xl'>
+			<Text weight='black' size='xl'>
+				Light y j
+			</Text>
+			<Text weight='black' size='lg'>
+				Light y j
+			</Text>
+			<Text weight='bold' size='md'>
+				Light y j
+			</Text>
+			<Text weight='bold' size='sm'>
+				Light y j
+			</Text>
+			<Text weight='normal' size='xs'>
+				Light y j
+			</Text>
+			<Text weight='normal' size='xxs'>
+				Light y j
+			</Text>
+
+			<Text weight='black' size='md'>
+				Theme: {activeThemeName}
+			</Text>
+
+			<Text weight='bold' size='md' color='primaryContent'>
+				Primary color: {activeTheme.color.primaryContent}
+			</Text>
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});

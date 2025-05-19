@@ -1,9 +1,13 @@
+import { useThemeStore } from '@stores/theme-store';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import 'react-native-reanimated';
 import '@env/config';
+
 export {
 	// Catch any errors thrown by the Layout component.
 	ErrorBoundary,
@@ -44,11 +48,28 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+	const { activeTheme } = useThemeStore();
+
 	return (
-		<>
-			<Stack screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
+		<SafeAreaView
+			style={{ flex: 1 }}
+			edges={['top', 'left', 'right']}
+		>
+			<Stack
+				screenOptions={{
+					headerShown: false,
+					animation: 'slide_from_right',
+					contentStyle: {
+						backgroundColor: activeTheme.color.background,
+					},
+				}}
+			>
 				<Stack.Screen name='(tabs)' />
 			</Stack>
-		</>
+			<StatusBar
+				style='auto'
+				backgroundColor={activeTheme.color.background}
+			/>
+		</SafeAreaView>
 	);
 }

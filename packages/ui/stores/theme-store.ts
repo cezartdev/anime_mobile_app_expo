@@ -1,13 +1,13 @@
-import { create } from 'zustand';
-import {
-	persist,
-	createJSONStorage,
-} from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
 	Appearance,
 	type ColorSchemeName,
 } from 'react-native'; // Importar Appearance y ColorSchemeName
+import { create } from 'zustand';
+import {
+	createJSONStorage,
+	persist,
+} from 'zustand/middleware';
 import { Themes } from '../themes/themes'; // Asegúrate que la ruta sea correcta
 
 // Tipos para las preferencias y temas resueltos

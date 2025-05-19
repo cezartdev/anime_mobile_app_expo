@@ -1,4 +1,4 @@
-import type { TSize, TWeight, TColor } from './types';
+import type { TColor, TSize, TWeight } from './types';
 
 const breakpoints: TSize = {
 	xxs: 0,
@@ -44,10 +44,10 @@ const font = {
 	leading: {
 		xxs: 12,
 		xs: 18,
-		sm: 22,
-		md: 30,
-		lg: 44,
-		xl: 60,
+		sm: 30,
+		md: 45,
+		lg: 62,
+		xl: 87,
 	} satisfies TSize,
 };
 
@@ -61,52 +61,52 @@ const baseSettings = {
 const lightTheme = {
 	...baseSettings,
 	color: {
-		background: '#F2F4F5', //100
-		shade: '#E4E7EB', // 200
-		shadow: '#CCD1D9', //300
+		background: '#EEF2F6', //100
+		shade: '#F7F9FA', // 200
+		shadow: '#DFE5ED', //300
 		content: '#0D1529', //Text color
-		primary: '#5CE8B3',
-		primaryContent: '#002C21',
-		secondary: '#A1B1FF',
-		secondaryContent: '#022D14',
-		accent: '#7AF1A7',
-		accentContent: '#ffffff',
-		neutral: '#00776F',
-		neutralContent: '#EFFCF9',
-		info: '#00A4F2',
-		infoContent: '#EDF7FD',
-		success: '#7ACC00',
-		successContent: '#F5FCE5',
-		warning: '#FA9700',
-		warningContent: '#FDF9E8',
-		error: '#F43098',
-		errorContent: '#FCF2F8',
+		primary: '#002C21',
+		primaryContent: '#5CE8B3',
+		secondary: '#030712',
+		secondaryContent: '#F7F8FA',
+		accent: '#8BC2FF',
+		accentContent: '#162455',
+		neutral: '#18181B',
+		neutralContent: '#F8F8F8',
+		info: '#2A7EFF',
+		infoContent: '#EFF6FF',
+		success: '#00BAA6',
+		successContent: '#EFFCF9',
+		warning: '#EEAF00',
+		warningContent: '#FCFAE6',
+		error: '#F82834',
+		errorContent: '#FEF2F2',
 	} satisfies TColor,
 };
 
 const darkTheme = {
 	...baseSettings,
 	color: {
-		background: '#ffffff', //100
-		shade: '#f0f0f0', // 200
-		shadow: '#f0f0f0', //300
-		content: '#d0d0d0', //Text color
-		primary: '#000000',
-		primaryContent: '#ffffff',
-		secondary: '#000000',
-		secondaryContent: '#ffffff',
-		accent: '#000000',
-		accentContent: '#ffffff',
-		neutral: '#000000',
-		neutralContent: '#ffffff',
-		info: '#0000ff',
-		infoContent: '#ffffff',
-		success: '#00ff00',
-		successContent: '#000000',
-		warning: '#ffcc00',
-		warningContent: '#000000',
-		error: '#ff0000',
-		errorContent: '#ffffff',
+		background: '#0D1529', //100
+		shade: '#1A273A', // 200
+		shadow: '#010515', //300
+		content: '#EEF2F6', //Text color
+		primary: '#002C21',
+		primaryContent: '#5CE8B3',
+		secondary: '#030712',
+		secondaryContent: '#F7F8FA',
+		accent: '#8BC2FF',
+		accentContent: '#162455',
+		neutral: '#18181B',
+		neutralContent: '#F8F8F8',
+		info: '#2A7EFF',
+		infoContent: '#EFF6FF',
+		success: '#00BAA6',
+		successContent: '#EFFCF9',
+		warning: '#EEAF00',
+		warningContent: '#FCFAE6',
+		error: '#F82834',
+		errorContent: '#FEF2F2',
 	} satisfies TColor,
 };
 
