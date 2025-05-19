@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "expo_react_native_example_1",
+    "slug": "expo_react_native_example_1",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./packages/ui/assets/images/icon.png",
+    "scheme": "exporeactnativeexample1",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./packages/ui/assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./packages/ui/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./packages/ui/assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

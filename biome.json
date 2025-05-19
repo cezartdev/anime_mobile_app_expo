@@ -1,0 +1,161 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": false
+    },
+    "files": {
+        "ignoreUnknown": false,
+        "ignore": [
+            "*.css",
+            "*.sass",
+            "*.scss",
+            "*.html",
+            "rspack.config.js",
+            "main.js",
+            "*._.js",
+            "index.js",
+            "babel.config.js"
+        ]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "tab",
+        "lineWidth": 60
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "correctness": {
+                "noUnusedVariables": {
+                    "level": "error",
+                    "fix": "none"
+                },
+                "noUnusedImports": {
+                    "level": "error",
+                    "fix": "safe"
+                },
+                "noUnusedFunctionParameters": {
+                    "level": "error",
+                    "fix": "none"
+                }
+            },
+            "complexity": {
+                "noForEach": "off"
+            },
+            "style": {
+                "useNodejsImportProtocol": "off",
+                "noNonNullAssertion": "off",
+                "useNamingConvention": {
+                    "level": "error",
+                    "fix": "none",
+                    "options": {
+                        "conventions": [
+                            {
+                                "selector": {
+                                    "kind": "variable"
+                                },
+                                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "function"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "class"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "classGetter"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "classSetter"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "classMethod"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "classProperty"
+                                },
+                                "formats": ["camelCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "interface"
+                                },
+                                "match": "I(.*)|(.*?)Error",
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "typeMethod"
+                                },
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "typeAlias"
+                                },
+                                "match": "T(.*)|(.*?)Error",
+                                "formats": ["PascalCase"]
+                            },
+                            {
+                                "selector": {
+                                    "kind": "objectLiteralMember"
+                                },
+                                "formats": ["camelCase", "CONSTANT_CASE"]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "ignore": [
+            "test",
+            "public",
+            "coverage",
+            "dist",
+            "build",
+            "out",
+            "node_modules",
+            "cypress",
+            ".next",
+            ".husky",
+            ".nyc_output",
+            "drizzle",
+            "docs",
+            ".vscode",
+            ".expo",
+            "static"
+        ]
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "single",
+            "jsxQuoteStyle": "single",
+            "quoteProperties": "asNeeded"
+        },
+        "parser":{
+            "unsafeParameterDecoratorsEnabled": true
+        }
+    }
+}
