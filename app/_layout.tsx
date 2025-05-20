@@ -52,7 +52,10 @@ function RootLayoutNav() {
 
 	return (
 		<SafeAreaView
-			style={{ flex: 1 }}
+			style={{
+				flex: 1,
+				backgroundColor: activeTheme.color.background,
+			}}
 			edges={['top', 'left', 'right']}
 		>
 			<Stack
@@ -66,10 +69,7 @@ function RootLayoutNav() {
 			>
 				<Stack.Screen name='(tabs)' />
 			</Stack>
-			<StatusBar
-				style='auto'
-				backgroundColor={activeTheme.color.background}
-			/>
+			<StatusBar style='auto' />
 		</SafeAreaView>
 	);
 }

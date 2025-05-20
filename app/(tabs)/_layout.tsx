@@ -59,7 +59,7 @@ export default function TabLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name='mylists'
+				name='my-lists'
 				options={{
 					title: 'My lists',
 					tabBarIcon: ({ size, focused }) => (
