@@ -1,13 +1,19 @@
 import { useThemeStore } from '@stores/theme-store';
 import type { TColor, TSize, TWeight } from '@themes/types';
-import { Text as RnText, StyleSheet } from 'react-native';
+import {
+	Text as RnText,
+	type StyleProp,
+	StyleSheet,
+	type TextStyle,
+} from 'react-native';
 import { useResponsive } from 'react-native-responsive-hook';
 
 interface IText {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	weight?: keyof TWeight;
 	size?: keyof TSize;
 	color?: keyof TColor;
+	style?: StyleProp<TextStyle>;
 }
 
 export default function Text({
@@ -15,6 +21,7 @@ export default function Text({
 	size = 'md',
 	weight = 'normal',
 	color = 'content',
+	style,
 }: IText) {
 	const { rem } = useResponsive();
 	const { activeTheme } = useThemeStore();
@@ -28,5 +35,7 @@ export default function Text({
 		},
 	});
 
-	return <RnText style={styles.text}>{children}</RnText>;
+	return (
+		<RnText style={[style, styles.text]}>{children}</RnText>
+	);
 }

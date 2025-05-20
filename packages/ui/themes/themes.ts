@@ -11,11 +11,11 @@ const breakpoints: TSize = {
 
 const spacing: TSize = {
 	xxs: 2,
-	xs: 4,
-	sm: 6,
-	md: 9,
-	lg: 14,
-	xl: 21,
+	xs: 8,
+	sm: 16,
+	md: 32,
+	lg: 64,
+	xl: 128,
 };
 
 const radius: TSize = {
