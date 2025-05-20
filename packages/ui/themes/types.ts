@@ -35,3 +35,22 @@ export type TColor = {
 	error: string;
 	errorContent: string;
 };
+
+export type TVariant = {
+	primary: string;
+	secondary: string;
+	accent: string;
+	neutral: string;
+	info: string;
+	success: string;
+	warning: string;
+	error: string;
+	softPrimary: string;
+	softSecondary: string;
+	softAccent: string;
+	softNeutral: string;
+	softInfo: string;
+	softSuccess: string;
+	softWarning: string;
+	softError: string;
+};
